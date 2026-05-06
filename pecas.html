@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/mecanicos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <title>Peças</title>
+</head>
+<body>
+<button class="menu-toggle" id="menuToggle">
+    <span class="fas fa-bars"></span>
+</button>
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <img src="imagens/logo-oficina.jpg" alt="Logo" style="width: 40px;">
+        </div>
+        <hr>
+        <ul class="menu">
+            <li>
+                <a href="menu.html">
+                    <span class="fas fa-home"></span>
+                    <span class="menu-texto">Página Inicial</span>
+                </a>
+            </li>
+            <li>
+                <a href="mecanicos.html">
+                    <span class="fas fa-tools"></span>
+                    <span class="menu-texto">Mecânicos</span>
+                </a>
+            </li>
+            <li>
+                <a href="clientes.html">
+                    <span class="fas fa-users"></span>
+                    <span class="menu-texto">Clientes</span>
+                </a>
+            </li>
+            <li>
+                <a href="pecas.html" class="active">
+                    <span class="fas fa-car-battery"></span>
+                    <span class="menu-texto">Peças</span>
+                </a>
+            </li>
+            <li>
+                <a href="carros.html">
+                    <span class="fas fa-car"></span>
+                    <span class="menu-texto">Veículos</span>
+                </a>
+            </li>
+            <li>
+                <a href="departamentos.html">
+                    <span class="fas fa-warehouse"></span>
+                    <span class="menu-texto">Departamentos</span>
+                </a>
+            </li>
+            <li>
+                <a href="estoque.html">
+                    <span class="fas fa-boxes"></span>
+                    <span class="menu-texto">Estoque</span>
+                </a>
+            </li>
+            <li>
+                <a href="vendas.html">
+                    <span class="fas fa-cash-register"></span>
+                    <span class="menu-texto">Vendas</span>
+                </a>
+            </li>
+            <li>
+                <a href="configuracoes.html">
+                    <span class="fas fa-cogs"></span>
+                    <span class="menu-texto">Configurações</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+        <header class="top-bar">
+            <button class="btn-voltar" onclick="window.history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="btn-voltar" onclick="window.location.href='menu.html'">
+                <i class="fas fa-home"></i>
+            </button>
+            <h1>Peças <span class="fas fa-car-battery"></h1>
+                <br>
+            <div class="search">
+                <input type="text" placeholder="Procurar por Código ou Nome">
+                <button><i class="fas fa-search"></i></button>
+            </div> 
+            <div class="actions">
+                <button class="add"><a href="addpeca.html">Adicionar Peça</a></button>
+                <button class="sair"><a href="menu.html">Sair</a></button>
+            </div>
+        </header>
+
+        <div class="imgCoala">
+            <h2>Nenhuma peça cadastrada</h2>
+            <p>As peças aparecerão aqui após serem adicionadas</p>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/configuracoes.css">
+    <title>Nova Peça</title>
+</head>
+<body>
+    <button class="menu-toggle" id="menuToggle">
+        <span class="fas fa-bars"></span>
+    </button>
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <img src="imagens/logo-oficina.jpg" alt="Logo" style="width: 40px;">
+        </div>
+        <hr>
+        <ul class="menu">
+            <li><a href="menu.html"><span class="fas fa-home"></span><span class="menu-texto">Página Inicial</span></a></li>
+            <li><a href="mecanicos.html"><span class="fas fa-tools"></span><span class="menu-texto">Mecânicos</span></a></li>
+            <li><a href="clientes.html"><span class="fas fa-users"></span><span class="menu-texto">Clientes</span></a></li>
+            <li><a href="pecas.html" class="active"><span class="fas fa-car-battery"></span><span class="menu-texto">Peças</span></a></li>
+            <li><a href="carros.html"><span class="fas fa-car"></span><span class="menu-texto">Veículos</span></a></li>
+            <li><a href="departamentos.html"><span class="fas fa-warehouse"></span><span class="menu-texto">Departamentos</span></a></li>
+            <li><a href="estoque.html"><span class="fas fa-boxes"></span><span class="menu-texto">Estoque</span></a></li>
+            <li><a href="vendas.html"><span class="fas fa-cash-register"></span><span class="menu-texto">Vendas</span></a></li>
+            <li><a href="configuracoes.html"><span class="fas fa-cogs"></span><span class="menu-texto">Configurações</span></a></li>
+        </ul>
+    </div>
+
+    <main class="content">
+        <div class="header">
+            <h1>Cadastrar Peça</h1>
+            <div class="user-actions">
+                <span class="fas fa-bell"></span>
+                <button class="sair">Sair</button>
+            </div>
+        </div>
+        
+        <div class="settings-container">
+            <form id="formPeca">
+                <h3><i class="fas fa-cog"></i> Dados da Peça</h3>
+                <div class="settings-row">
+                    <div class="settings-item">
+                        <label for="codigo"><i class="fas fa-barcode"></i> Código:</label>
+                        <input type="text" id="codigo" name="codigo" required>
+                    </div>
+                    <div class="settings-item">
+                        <label for="nome"><i class="fas fa-tag"></i> Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                </div>
+
+                <div class="settings-row">
+                    <div class="settings-item">
+                        <label for="estoque"><i class="fas fa-boxes"></i> Estoque:</label>
+                        <input type="number" id="estoque" name="estoque" min="0" required>
+                    </div>
+                    <div class="settings-item">
+                        <label for="preco"><i class="fas fa-dollar-sign"></i> Preço Unitário:</label>
+                        <input type="number" id="preco" name="preco" step="0.01" min="0" required>
+                    </div>
+                </div>
+
+                <div class="settings-row">
+                    <div class="settings-item">
+                        <label for="veiculo"><i class="fas fa-car"></i> Veículo Aplicável:</label>
+                        <input type="text" id="veiculo" name="veiculo">
+                    </div>
+                    <div class="settings-item">
+                        <label for="fabricante"><i class="fas fa-industry"></i> Fabricante:</label>
+                        <input type="text" id="fabricante" name="fabricante">
+                    </div>
+                </div>
+
+                <div class="settings-item">
+                    <label for="descricao"><i class="fas fa-align-left"></i> Descrição:</label>
+                    <textarea id="descricao" name="descricao" rows="3"></textarea>
+                </div>
+
+                <div class="settings-item">
+                    <button type="submit" class="btn-save">
+                        <i class="fas fa-save"></i> Salvar Peça
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

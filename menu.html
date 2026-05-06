@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/configuracoes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Oficina Mecânica</title>
+</head>
+<body>
+    
+    <button id="menuToggle" class="menu-toggle">
+        <span class="fas fa-bars"></span>
+    </button>
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <img src="imagens/logo-oficina.jpg" alt="Logo" style="width: 40px;">
+        </div>
+        <hr>
+        <ul class="menu">
+            <li>
+                <a href="menu.html" class="active">
+                    <span class="fas fa-home"></span>
+                    <span class="menu-texto">Página Inicial</span>
+                </a>
+            </li>
+            <li>
+                <a href="mecanicos.html">
+                    <span class="fas fa-tools"></span>
+                    <span class="menu-texto">Mecânicos</span>
+                </a>
+            </li>
+            <li>
+                <a href="clientes.html">
+                    <span class="fas fa-users"></span>
+                    <span class="menu-texto">Clientes</span>
+                </a>
+            </li>
+            <li>
+                <a href="pecas.html">
+                    <span class="fas fa-car-battery"></span>
+                    <span class="menu-texto">Peças</span>
+                </a>
+            </li>
+            <li>
+                <a href="carros.html">
+                    <span class="fas fa-car"></span>
+                    <span class="menu-texto">Veículos</span>
+                </a>
+            </li>
+            <li>
+                <a href="departamentos.html">
+                    <span class="fas fa-warehouse"></span>
+                    <span class="menu-texto">Departamentos</span>
+                </a>
+            </li>
+            <li>
+                <a href="estoque.html">
+                    <span class="fas fa-boxes"></span>
+                    <span class="menu-texto">Estoque</span>
+                </a>
+            </li>
+            <li>
+                <a href="vendas.html">
+                    <span class="fas fa-cash-register"></span>
+                    <span class="menu-texto">Vendas</span>
+                </a>
+            </li>
+            <li>
+                <a href="configuracoes.html">
+                    <span class="fas fa-cogs"></span>
+                    <span class="menu-texto">Configurações</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <img src="imagens/logo-oficina.jpg" alt="Logo" style="width: 100px;">
+            <h1>Bem-vindo à Oficina Mecânica </h1>
+            <div class="user-actions">
+                <span class="fas fa-bell"></span>
+                <button class="sair">Sair</button>
+            </div>
+        </div>
+        
+        <div class="dashboard">
+            <div class="card">
+                <span class="fas fa-users"></span>
+                <h3>Clientes</h3>
+                <a href="clientes.html" class="btn-link">Gerenciar</a>
+            </div>
+                        
+            <div class="card">
+                <span class="fas fa-car"></span>
+                <h3>Veículos</h3>
+                <a href="carros.html" class="btn-link">Gerenciar</a>
+            </div>
+
+            <div class="card">
+                <span class="fas fa-tools"></span>
+                <h3>Mecânicos</h3>
+                <a href="mecanicos.html" class="btn-link">Gerenciar</a>
+            </div>
+            
+            <div class="card">
+                <span class="fas fa-warehouse"></span>
+                <h3>Departamentos</h3>
+                <a href="departamentos.html" class="btn-link">Gerenciar</a>
+            </div>
+            
+            <div class="card">
+                <span class="fas fa-boxes"></span>
+                <h3>Estoque</h3>
+                <a href="estoque.html" class="btn-link">Gerenciar</a>
+            </div>
+
+            <div class="card">
+                <span class="fas fa-car-battery"></span>
+                <h3>Peças</h3>
+                <a href="pecas.html" class="btn-link">Gerenciar</a>
+            </div>
+            
+            <div class="card">
+                <span class="fas fa-cash-register"></span>
+                <h3>Vendas</h3>
+                <a href="vendas.html" class="btn-link">Gerenciar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="js/main.js"></script>
+
+    
+</body>
+</html>

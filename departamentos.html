@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/mecanicos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <title>Departamentos</title>
+</head>
+<body>
+<button class="menu-toggle" id="menuToggle">
+    <span class="fas fa-bars"></span>
+</button>
+
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <img src="imagens/logo-oficina.jpg" alt="Logo" style="width: 40px;">
+        </div>
+        <hr>
+        <ul class="menu">
+            <li>
+                <a href="menu.html">
+                    <span class="fas fa-home"></span>
+                    <span class="menu-texto">Página Inicial</span>
+                </a>
+            </li>
+            <li>
+                <a href="mecanicos.html">
+                    <span class="fas fa-tools"></span>
+                    <span class="menu-texto">Mecânicos</span>
+                </a>
+            </li>
+            <li>
+                <a href="clientes.html">
+                    <span class="fas fa-users"></span>
+                    <span class="menu-texto">Clientes</span>
+                </a>
+            </li>
+            <li>
+                <a href="pecas.html">
+                    <span class="fas fa-car-battery"></span>
+                    <span class="menu-texto">Peças</span>
+                </a>
+            </li>
+            <li>
+                <a href="carros.html">
+                    <span class="fas fa-car"></span>
+                    <span class="menu-texto">Veículos</span>
+                </a>
+            </li>
+            <li>
+                <a href="departamentos.html" class="active">
+                    <span class="fas fa-warehouse"></span>
+                    <span class="menu-texto">Departamentos</span>
+                </a>
+            </li>
+            <li>
+                <a href="estoque.html">
+                    <span class="fas fa-boxes"></span>
+                    <span class="menu-texto">Estoque</span>
+                </a>
+            </li>
+            <li>
+                <a href="vendas.html">
+                    <span class="fas fa-cash-register"></span>
+                    <span class="menu-texto">Vendas</span>
+                </a>
+            </li>
+            <li>
+                <a href="configuracoes.html">
+                    <span class="fas fa-cogs"></span>
+                    <span class="menu-texto">Configurações</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <main class="content">
+        <header class="top-bar">
+            <button class="btn-voltar" onclick="window.history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="btn-voltar" onclick="window.location.href='menu.html'">
+                <i class="fas fa-home"></i>
+            </button>
+            <h1>Departamentos <span class="fas fa-warehouse"></span></h1>
+           
+            <br>
+            <div class="search">
+                <input type="text" placeholder="Procurar Departamento">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="actions">
+                <button class="add"><a href="adddepartamento.html">Adicionar Departamento</a></button>
+                <button class="sair"><a href="menu.html">Sair</a></button>
+            </div>
+        </header>
+
+        <div class="lista-departamentos" id="listaDepartamentos">
+            <!-- Os departamentos serão carregados dinamicamente aqui -->
+            <div class="item-lista empty-state">
+                <span class="fas fa-info-circle"></span>
+                <div class="info">
+                    <h3>Nenhum departamento cadastrado</h3>
+                    <p>Adicione seu primeiro departamento usando o botão acima</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+<script>
+    // Função para carregar departamentos
+    function carregarDepartamentos() {
+        const container = document.getElementById('listaDepartamentos');
+        const departamentos = JSON.parse(localStorage.getItem('departamentos')) || [];
+        
+        if (departamentos.length === 0) {
+            container.innerHTML = `
+                <div class="item-lista empty-state">
+                    <span class="fas fa-info-circle"></span>
+                    <div class="info">
+                        <h3>Nenhum departamento cadastrado</h3>
+                        <p>Adicione seu primeiro departamento usando o botão acima</p>
+                    </div>
+                </div>
+            `;
+            return;
+        }
+        
+        container.innerHTML = departamentos.map(depto => `
+            <div class="item-lista">
+                <span class="fas fa-warehouse"></span>
+                <div class="info">
+                    <h3>${depto.nome}</h3>
+                    <p>Responsável: ${depto.responsavel || 'Não definido'}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Carrega departamentos quando a página abre
+    document.addEventListener('DOMContentLoaded', carregarDepartamentos);
+
+    // Função original de configurações (mantenha se ainda for usar)
+    function aplicarConfiguracoes() {
+        
+    }
+</script>
+</body>
+</html>

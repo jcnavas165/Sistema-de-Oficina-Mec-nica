@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/configuracoes.css">
+    <title>Novo Cliente</title>
+</head>
+<body>
+    <button class="menu-toggle" id="menuToggle">
+        <span class="fas fa-bars"></span>
+    </button>
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <img src="imagens/logo-oficina.jpg" alt="Logo" style="width: 40px;">
+        </div>
+        <hr>
+        <ul class="menu">
+            <li><a href="menu.html"><span class="fas fa-home"></span><span class="menu-texto">Página Inicial</span></a></li>
+            <li><a href="mecanicos.html"><span class="fas fa-tools"></span><span class="menu-texto">Mecânicos</span></a></li>
+            <li><a href="clientes.html" class="active"><span class="fas fa-users"></span><span class="menu-texto">Clientes</span></a></li>
+            <li><a href="pecas.html"><span class="fas fa-car-battery"></span><span class="menu-texto">Peças</span></a></li>
+            <li><a href="carros.html"><span class="fas fa-car"></span><span class="menu-texto">Veículos</span></a></li>
+            <li><a href="departamentos.html"><span class="fas fa-warehouse"></span><span class="menu-texto">Departamentos</span></a></li>
+            <li><a href="estoque.html"><span class="fas fa-boxes"></span><span class="menu-texto">Estoque</span></a></li>
+            <li><a href="vendas.html"><span class="fas fa-cash-register"></span><span class="menu-texto">Vendas</span></a></li>
+            <li><a href="configuracoes.html"><span class="fas fa-cogs"></span><span class="menu-texto">Configurações</span></a></li>
+        </ul>
+    </div>
+
+    <main class="content">
+        <div class="header">
+            <h1>Cadastrar Cliente</h1>
+            <div class="user-actions">
+                <span class="fas fa-bell"></span>
+                <button class="sair">Sair</button>
+            </div>
+        </div>
+        
+        <div class="settings-container">
+            <form id="formCliente">
+                <h3><i class="fas fa-id-card"></i> Dados Pessoais</h3>
+                <div class="settings-row">
+                    <div class="settings-item">
+                        <label for="nome"><i class="fas fa-user"></i> Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required minlength="5">
+                    </div>
+                    <div class="settings-item">
+                        <label for="cpf"><i class="fas fa-id-card"></i> CPF:</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required
+                               pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-phone"></i> Contato</h3>
+                <div class="settings-row">
+                    <div class="settings-item">
+                        <label for="telefone"><i class="fas fa-mobile-alt"></i> Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required
+                               pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}">
+                    </div>
+                    <div class="settings-item">
+                        <label for="email"><i class="fas fa-envelope"></i> E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="cliente@exemplo.com">
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
+                <div class="settings-row">
+                    <div class="settings-item">
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco">
+                    </div>
+                    <div class="settings-item">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-car"></i> Veículo Associado</h3>
+                <div class="settings-item">
+                    <label for="veiculo"><i class="fas fa-car-side"></i> Placa do Veículo:</label>
+                    <input type="text" id="veiculo" name="veiculo" placeholder="ABC-1234"
+                           pattern="[A-Za-z]{3}-?\d{4}">
+                </div>
+
+                <div class="settings-item">
+                    <button type="submit" class="btn-save">
+                        <i class="fas fa-save"></i> Cadastrar Cliente
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
